@@ -1,0 +1,60 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "covid-vamy-dev-01"
+		},
+		"ls_adls_covidreportingvamydl_accountKey": {
+			"value": ""
+		},
+		"ls_asa_covidreportingvamysa_connectionString": {
+			"value": ""
+		},
+		"ls_adls_covidreportingvamydl_properties_typeProperties_url": {
+			"value": "https://covidstorageaccvamyadls.dfs.core.windows.net"
+		},
+		"ls_http_ecdc_properties_typeProperties_url": {
+			"value": "@{linkedService().baseUrl}"
+		},
+		"tr_cases_death_properties_pl_ingest_ecdc_data_parameters_relativeUrl": {
+			"value": "covid19/nationalcasedeath/csv/data.csv"
+		},
+		"tr_cases_death_properties_pl_ingest_ecdc_data_parameters_filename": {
+			"value": "cases_death.csv"
+		},
+		"tr_cases_death_properties_pl_ingest_ecdc_data_parameters_baseUrl": {
+			"value": "https://opendata.ecdc.europa.eu"
+		},
+		"tr_country_response_properties_pl_ingest_ecdc_data_parameters_relativeUrl": {
+			"value": "/sites/default/files/document/response_graphs_data_2021-08-26.csv"
+		},
+		"tr_country_response_properties_pl_ingest_ecdc_data_parameters_filename": {
+			"value": "country_response.csv"
+		},
+		"tr_country_response_properties_pl_ingest_ecdc_data_parameters_baseUrl": {
+			"value": "http://www.ecdc.europa.eu"
+		},
+		"tr_hospital_adm_properties_pl_ingest_ecdc_data_parameters_relativeUrl": {
+			"value": "covid19/hospitalicuadmissionrates/csv/data.csv"
+		},
+		"tr_hospital_adm_properties_pl_ingest_ecdc_data_parameters_filename": {
+			"value": "hospital_admission.csv"
+		},
+		"tr_hospital_adm_properties_pl_ingest_ecdc_data_parameters_baseUrl": {
+			"value": "https://opendata.ecdc.europa.eu"
+		},
+		"tr_publish_daily_properties_typeProperties_scope": {
+			"value": "/subscriptions/f79a955e-ca0a-4b96-8885-2cc65b377035/resourceGroups/covid_analystics_vamy_rg/providers/Microsoft.Storage/storageAccounts/covidstorageaccvamy01"
+		},
+		"tr_testing_properties_pl_ingest_ecdc_data_parameters_relativeUrl": {
+			"value": "covid19/testing/csv/data.csv"
+		},
+		"tr_testing_properties_pl_ingest_ecdc_data_parameters_filename": {
+			"value": "testing.csv"
+		},
+		"tr_testing_properties_pl_ingest_ecdc_data_parameters_baseUrl": {
+			"value": "https://opendata.ecdc.europa.eu"
+		}
+	}
+}
