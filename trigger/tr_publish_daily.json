@@ -1,0 +1,24 @@
+{
+	"name": "tr_publish_daily",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pl_ingest_population_data",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/data/blobs/population_by_age",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/f79a955e-ca0a-4b96-8885-2cc65b377035/resourceGroups/covid_analystics_vamy_rg/providers/Microsoft.Storage/storageAccounts/covidstorageaccvamy01",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}

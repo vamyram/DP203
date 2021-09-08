@@ -1,0 +1,9 @@
+{
+	"name": "covid-vamy-dev-01",
+	"location": "uksouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "8873c407-9510-4327-8d29-7fb86d54cce3",
+		"tenantId": "86e3cd03-9209-4191-9a78-8261320cf2e6"
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"name": "tr_testing",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pl_ingest_ecdc_data",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"relativeUrl": "covid19/testing/csv/data.csv",
+					"filename": "testing.csv",
+					"baseUrl": "https://opendata.ecdc.europa.eu"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Hour",
+				"interval": 24,
+				"startTime": "2021-09-07T23:30:00",
+				"timeZone": "GMT Standard Time"
+			}
+		}
+	}
+}
