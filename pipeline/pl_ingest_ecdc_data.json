@@ -103,11 +103,11 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"relativeUrl": {
-											"value": "@pipeline().parameters.relativeUrl",
+											"value": "@item().sourceRelativeUrl",
 											"type": "Expression"
 										},
 										"baseUrl": {
-											"value": "@pipeline().parameters.baseUrl",
+											"value": "@item().sourceBaseURL",
 											"type": "Expression"
 										}
 									}
@@ -119,7 +119,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"filename": {
-											"value": "@pipeline().parameters.filename",
+											"value": "@item().sinkFileName",
 											"type": "Expression"
 										}
 									}
@@ -130,17 +130,6 @@
 				}
 			}
 		],
-		"parameters": {
-			"relativeUrl": {
-				"type": "string"
-			},
-			"filename": {
-				"type": "string"
-			},
-			"baseUrl": {
-				"type": "string"
-			}
-		},
 		"annotations": [],
 		"lastPublishTime": "2021-09-08T06:08:30Z"
 	},
