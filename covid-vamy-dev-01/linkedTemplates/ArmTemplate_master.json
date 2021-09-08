@@ -122,15 +122,6 @@
 					},
 					"tr_cases_death_properties_pl_ingest_ecdc_data_parameters_baseUrl": {
 						"value": "[parameters('tr_cases_death_properties_pl_ingest_ecdc_data_parameters_baseUrl')]"
-					},
-					"tr_country_response_properties_pl_ingest_ecdc_data_parameters_relativeUrl": {
-						"value": "[parameters('tr_country_response_properties_pl_ingest_ecdc_data_parameters_relativeUrl')]"
-					},
-					"tr_country_response_properties_pl_ingest_ecdc_data_parameters_filename": {
-						"value": "[parameters('tr_country_response_properties_pl_ingest_ecdc_data_parameters_filename')]"
-					},
-					"tr_country_response_properties_pl_ingest_ecdc_data_parameters_baseUrl": {
-						"value": "[parameters('tr_country_response_properties_pl_ingest_ecdc_data_parameters_baseUrl')]"
 					}
 				}
 			},
@@ -149,6 +140,15 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"tr_country_response_properties_pl_ingest_ecdc_data_parameters_relativeUrl": {
+						"value": "[parameters('tr_country_response_properties_pl_ingest_ecdc_data_parameters_relativeUrl')]"
+					},
+					"tr_country_response_properties_pl_ingest_ecdc_data_parameters_filename": {
+						"value": "[parameters('tr_country_response_properties_pl_ingest_ecdc_data_parameters_filename')]"
+					},
+					"tr_country_response_properties_pl_ingest_ecdc_data_parameters_baseUrl": {
+						"value": "[parameters('tr_country_response_properties_pl_ingest_ecdc_data_parameters_baseUrl')]"
 					},
 					"tr_hospital_adm_properties_pl_ingest_ecdc_data_parameters_relativeUrl": {
 						"value": "[parameters('tr_hospital_adm_properties_pl_ingest_ecdc_data_parameters_relativeUrl')]"
