@@ -1,6 +1,7 @@
 {
 	"name": "pl_ingest_ecdc_data",
 	"properties": {
+		"description": "My new changes",
 		"activities": [
 			{
 				"name": "Lookup File List",
