@@ -23,57 +23,9 @@
 			"type": "string",
 			"defaultValue": "@{linkedService().baseUrl}"
 		},
-		"tr_cases_death_properties_pl_ingest_ecdc_data_parameters_relativeUrl": {
-			"type": "string",
-			"defaultValue": "covid19/nationalcasedeath/csv/data.csv"
-		},
-		"tr_cases_death_properties_pl_ingest_ecdc_data_parameters_filename": {
-			"type": "string",
-			"defaultValue": "cases_death.csv"
-		},
-		"tr_cases_death_properties_pl_ingest_ecdc_data_parameters_baseUrl": {
-			"type": "string",
-			"defaultValue": "https://opendata.ecdc.europa.eu"
-		},
-		"tr_country_response_properties_pl_ingest_ecdc_data_parameters_relativeUrl": {
-			"type": "string",
-			"defaultValue": "/sites/default/files/document/response_graphs_data_2021-08-26.csv"
-		},
-		"tr_country_response_properties_pl_ingest_ecdc_data_parameters_filename": {
-			"type": "string",
-			"defaultValue": "country_response.csv"
-		},
-		"tr_country_response_properties_pl_ingest_ecdc_data_parameters_baseUrl": {
-			"type": "string",
-			"defaultValue": "http://www.ecdc.europa.eu"
-		},
-		"tr_hospital_adm_properties_pl_ingest_ecdc_data_parameters_relativeUrl": {
-			"type": "string",
-			"defaultValue": "covid19/hospitalicuadmissionrates/csv/data.csv"
-		},
-		"tr_hospital_adm_properties_pl_ingest_ecdc_data_parameters_filename": {
-			"type": "string",
-			"defaultValue": "hospital_admission.csv"
-		},
-		"tr_hospital_adm_properties_pl_ingest_ecdc_data_parameters_baseUrl": {
-			"type": "string",
-			"defaultValue": "https://opendata.ecdc.europa.eu"
-		},
 		"tr_publish_daily_properties_typeProperties_scope": {
 			"type": "string",
 			"defaultValue": "/subscriptions/f79a955e-ca0a-4b96-8885-2cc65b377035/resourceGroups/covid_analystics_vamy_rg/providers/Microsoft.Storage/storageAccounts/covidstorageaccvamy01"
-		},
-		"tr_testing_properties_pl_ingest_ecdc_data_parameters_relativeUrl": {
-			"type": "string",
-			"defaultValue": "covid19/testing/csv/data.csv"
-		},
-		"tr_testing_properties_pl_ingest_ecdc_data_parameters_filename": {
-			"type": "string",
-			"defaultValue": "testing.csv"
-		},
-		"tr_testing_properties_pl_ingest_ecdc_data_parameters_baseUrl": {
-			"type": "string",
-			"defaultValue": "https://opendata.ecdc.europa.eu"
 		},
 		"containerUri": {
 			"type": "string",
@@ -113,15 +65,6 @@
 					},
 					"ls_http_ecdc_properties_typeProperties_url": {
 						"value": "[parameters('ls_http_ecdc_properties_typeProperties_url')]"
-					},
-					"tr_cases_death_properties_pl_ingest_ecdc_data_parameters_relativeUrl": {
-						"value": "[parameters('tr_cases_death_properties_pl_ingest_ecdc_data_parameters_relativeUrl')]"
-					},
-					"tr_cases_death_properties_pl_ingest_ecdc_data_parameters_filename": {
-						"value": "[parameters('tr_cases_death_properties_pl_ingest_ecdc_data_parameters_filename')]"
-					},
-					"tr_cases_death_properties_pl_ingest_ecdc_data_parameters_baseUrl": {
-						"value": "[parameters('tr_cases_death_properties_pl_ingest_ecdc_data_parameters_baseUrl')]"
 					}
 				}
 			},
@@ -141,35 +84,8 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"tr_country_response_properties_pl_ingest_ecdc_data_parameters_relativeUrl": {
-						"value": "[parameters('tr_country_response_properties_pl_ingest_ecdc_data_parameters_relativeUrl')]"
-					},
-					"tr_country_response_properties_pl_ingest_ecdc_data_parameters_filename": {
-						"value": "[parameters('tr_country_response_properties_pl_ingest_ecdc_data_parameters_filename')]"
-					},
-					"tr_country_response_properties_pl_ingest_ecdc_data_parameters_baseUrl": {
-						"value": "[parameters('tr_country_response_properties_pl_ingest_ecdc_data_parameters_baseUrl')]"
-					},
-					"tr_hospital_adm_properties_pl_ingest_ecdc_data_parameters_relativeUrl": {
-						"value": "[parameters('tr_hospital_adm_properties_pl_ingest_ecdc_data_parameters_relativeUrl')]"
-					},
-					"tr_hospital_adm_properties_pl_ingest_ecdc_data_parameters_filename": {
-						"value": "[parameters('tr_hospital_adm_properties_pl_ingest_ecdc_data_parameters_filename')]"
-					},
-					"tr_hospital_adm_properties_pl_ingest_ecdc_data_parameters_baseUrl": {
-						"value": "[parameters('tr_hospital_adm_properties_pl_ingest_ecdc_data_parameters_baseUrl')]"
-					},
 					"tr_publish_daily_properties_typeProperties_scope": {
 						"value": "[parameters('tr_publish_daily_properties_typeProperties_scope')]"
-					},
-					"tr_testing_properties_pl_ingest_ecdc_data_parameters_relativeUrl": {
-						"value": "[parameters('tr_testing_properties_pl_ingest_ecdc_data_parameters_relativeUrl')]"
-					},
-					"tr_testing_properties_pl_ingest_ecdc_data_parameters_filename": {
-						"value": "[parameters('tr_testing_properties_pl_ingest_ecdc_data_parameters_filename')]"
-					},
-					"tr_testing_properties_pl_ingest_ecdc_data_parameters_baseUrl": {
-						"value": "[parameters('tr_testing_properties_pl_ingest_ecdc_data_parameters_baseUrl')]"
 					}
 				}
 			},

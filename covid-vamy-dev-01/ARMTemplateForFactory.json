@@ -23,57 +23,9 @@
 			"type": "string",
 			"defaultValue": "@{linkedService().baseUrl}"
 		},
-		"tr_cases_death_properties_pl_ingest_ecdc_data_parameters_relativeUrl": {
-			"type": "string",
-			"defaultValue": "covid19/nationalcasedeath/csv/data.csv"
-		},
-		"tr_cases_death_properties_pl_ingest_ecdc_data_parameters_filename": {
-			"type": "string",
-			"defaultValue": "cases_death.csv"
-		},
-		"tr_cases_death_properties_pl_ingest_ecdc_data_parameters_baseUrl": {
-			"type": "string",
-			"defaultValue": "https://opendata.ecdc.europa.eu"
-		},
-		"tr_country_response_properties_pl_ingest_ecdc_data_parameters_relativeUrl": {
-			"type": "string",
-			"defaultValue": "/sites/default/files/document/response_graphs_data_2021-08-26.csv"
-		},
-		"tr_country_response_properties_pl_ingest_ecdc_data_parameters_filename": {
-			"type": "string",
-			"defaultValue": "country_response.csv"
-		},
-		"tr_country_response_properties_pl_ingest_ecdc_data_parameters_baseUrl": {
-			"type": "string",
-			"defaultValue": "http://www.ecdc.europa.eu"
-		},
-		"tr_hospital_adm_properties_pl_ingest_ecdc_data_parameters_relativeUrl": {
-			"type": "string",
-			"defaultValue": "covid19/hospitalicuadmissionrates/csv/data.csv"
-		},
-		"tr_hospital_adm_properties_pl_ingest_ecdc_data_parameters_filename": {
-			"type": "string",
-			"defaultValue": "hospital_admission.csv"
-		},
-		"tr_hospital_adm_properties_pl_ingest_ecdc_data_parameters_baseUrl": {
-			"type": "string",
-			"defaultValue": "https://opendata.ecdc.europa.eu"
-		},
 		"tr_publish_daily_properties_typeProperties_scope": {
 			"type": "string",
 			"defaultValue": "/subscriptions/f79a955e-ca0a-4b96-8885-2cc65b377035/resourceGroups/covid_analystics_vamy_rg/providers/Microsoft.Storage/storageAccounts/covidstorageaccvamy01"
-		},
-		"tr_testing_properties_pl_ingest_ecdc_data_parameters_relativeUrl": {
-			"type": "string",
-			"defaultValue": "covid19/testing/csv/data.csv"
-		},
-		"tr_testing_properties_pl_ingest_ecdc_data_parameters_filename": {
-			"type": "string",
-			"defaultValue": "testing.csv"
-		},
-		"tr_testing_properties_pl_ingest_ecdc_data_parameters_baseUrl": {
-			"type": "string",
-			"defaultValue": "https://opendata.ecdc.europa.eu"
 		}
 	},
 	"variables": {
@@ -188,11 +140,11 @@
 											"type": "DatasetReference",
 											"parameters": {
 												"relativeUrl": {
-													"value": "@pipeline().parameters.relativeUrl",
+													"value": "@item().sourceRelativeUrl",
 													"type": "Expression"
 												},
 												"baseUrl": {
-													"value": "@pipeline().parameters.baseUrl",
+													"value": "@item().sourceBaseURL",
 													"type": "Expression"
 												}
 											}
@@ -204,7 +156,7 @@
 											"type": "DatasetReference",
 											"parameters": {
 												"filename": {
-													"value": "@pipeline().parameters.filename",
+													"value": "@item().sinkFileName",
 													"type": "Expression"
 												}
 											}
@@ -215,17 +167,6 @@
 						}
 					}
 				],
-				"parameters": {
-					"relativeUrl": {
-						"type": "string"
-					},
-					"filename": {
-						"type": "string"
-					},
-					"baseUrl": {
-						"type": "string"
-					}
-				},
 				"annotations": [],
 				"lastPublishTime": "2021-09-08T06:08:30Z"
 			},
@@ -1126,11 +1067,7 @@
 							"referenceName": "pl_ingest_ecdc_data",
 							"type": "PipelineReference"
 						},
-						"parameters": {
-							"relativeUrl": "[parameters('tr_cases_death_properties_pl_ingest_ecdc_data_parameters_relativeUrl')]",
-							"filename": "[parameters('tr_cases_death_properties_pl_ingest_ecdc_data_parameters_filename')]",
-							"baseUrl": "[parameters('tr_cases_death_properties_pl_ingest_ecdc_data_parameters_baseUrl')]"
-						}
+						"parameters": {}
 					}
 				],
 				"type": "ScheduleTrigger",
@@ -1160,11 +1097,7 @@
 							"referenceName": "pl_ingest_ecdc_data",
 							"type": "PipelineReference"
 						},
-						"parameters": {
-							"relativeUrl": "[parameters('tr_country_response_properties_pl_ingest_ecdc_data_parameters_relativeUrl')]",
-							"filename": "[parameters('tr_country_response_properties_pl_ingest_ecdc_data_parameters_filename')]",
-							"baseUrl": "[parameters('tr_country_response_properties_pl_ingest_ecdc_data_parameters_baseUrl')]"
-						}
+						"parameters": {}
 					}
 				],
 				"type": "ScheduleTrigger",
@@ -1194,11 +1127,7 @@
 							"referenceName": "pl_ingest_ecdc_data",
 							"type": "PipelineReference"
 						},
-						"parameters": {
-							"relativeUrl": "[parameters('tr_hospital_adm_properties_pl_ingest_ecdc_data_parameters_relativeUrl')]",
-							"filename": "[parameters('tr_hospital_adm_properties_pl_ingest_ecdc_data_parameters_filename')]",
-							"baseUrl": "[parameters('tr_hospital_adm_properties_pl_ingest_ecdc_data_parameters_baseUrl')]"
-						}
+						"parameters": {}
 					}
 				],
 				"type": "ScheduleTrigger",
@@ -1258,11 +1187,7 @@
 							"referenceName": "pl_ingest_ecdc_data",
 							"type": "PipelineReference"
 						},
-						"parameters": {
-							"relativeUrl": "[parameters('tr_testing_properties_pl_ingest_ecdc_data_parameters_relativeUrl')]",
-							"filename": "[parameters('tr_testing_properties_pl_ingest_ecdc_data_parameters_filename')]",
-							"baseUrl": "[parameters('tr_testing_properties_pl_ingest_ecdc_data_parameters_baseUrl')]"
-						}
+						"parameters": {}
 					}
 				],
 				"type": "ScheduleTrigger",

@@ -22,18 +22,6 @@
 		"ls_http_ecdc_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "@{linkedService().baseUrl}"
-		},
-		"tr_cases_death_properties_pl_ingest_ecdc_data_parameters_relativeUrl": {
-			"type": "string",
-			"defaultValue": "covid19/nationalcasedeath/csv/data.csv"
-		},
-		"tr_cases_death_properties_pl_ingest_ecdc_data_parameters_filename": {
-			"type": "string",
-			"defaultValue": "cases_death.csv"
-		},
-		"tr_cases_death_properties_pl_ingest_ecdc_data_parameters_baseUrl": {
-			"type": "string",
-			"defaultValue": "https://opendata.ecdc.europa.eu"
 		}
 	},
 	"variables": {
@@ -691,11 +679,11 @@
 											"type": "DatasetReference",
 											"parameters": {
 												"relativeUrl": {
-													"value": "@pipeline().parameters.relativeUrl",
+													"value": "@item().sourceRelativeUrl",
 													"type": "Expression"
 												},
 												"baseUrl": {
-													"value": "@pipeline().parameters.baseUrl",
+													"value": "@item().sourceBaseURL",
 													"type": "Expression"
 												}
 											}
@@ -707,7 +695,7 @@
 											"type": "DatasetReference",
 											"parameters": {
 												"filename": {
-													"value": "@pipeline().parameters.filename",
+													"value": "@item().sinkFileName",
 													"type": "Expression"
 												}
 											}
@@ -718,17 +706,6 @@
 						}
 					}
 				],
-				"parameters": {
-					"relativeUrl": {
-						"type": "string"
-					},
-					"filename": {
-						"type": "string"
-					},
-					"baseUrl": {
-						"type": "string"
-					}
-				},
 				"annotations": [],
 				"lastPublishTime": "2021-09-08T06:08:30Z"
 			},
@@ -1093,11 +1070,7 @@
 							"referenceName": "pl_ingest_ecdc_data",
 							"type": "PipelineReference"
 						},
-						"parameters": {
-							"relativeUrl": "[parameters('tr_cases_death_properties_pl_ingest_ecdc_data_parameters_relativeUrl')]",
-							"filename": "[parameters('tr_cases_death_properties_pl_ingest_ecdc_data_parameters_filename')]",
-							"baseUrl": "[parameters('tr_cases_death_properties_pl_ingest_ecdc_data_parameters_baseUrl')]"
-						}
+						"parameters": {}
 					}
 				],
 				"type": "ScheduleTrigger",
